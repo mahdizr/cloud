@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1894.7">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Monaco; color: #000000; -webkit-text-stroke: #ffffff; background-color: #ffffff}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Monaco; color: #000000; -webkit-text-stroke: #ffffff}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px 'Helvetica Neue'; color: #0d0d0d; -webkit-text-stroke: #0d0d0d}
+    span.s1 {font-kerning: none}
+    span.s2 {font: 14.0px Monaco; font-kerning: none; color: #000000; background-color: #ffffff; -webkit-text-stroke: 0px #ffffff}
+  </style>
+</head>
+<body>
+<p class="p1"><span class="s1">&lt;!DOCTYPE html&gt;</span></p>
+<p class="p1"><span class="s1">&lt;html lang="en"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;head&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;title&gt;Weather Information&lt;/title&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;style&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>body {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background-color: #f3f3f3;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>color: #333;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>text-align: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin: 20px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>h1 {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>color: #0078d4;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>label {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-size: 18px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin-right: 10px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>#cityInput {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>padding: 10px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-size: 16px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin-right: 10px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>width: 200px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>#getWeatherButton {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>padding: 10px 20px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-size: 16px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>cursor: pointer;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background-color: #0078d4;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>color: #fff;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border: none;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border-radius: 4px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>#weatherInfo {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-size: 18px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin-top: 20px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>padding: 20px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background-color: #fff;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border-radius: 8px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>#errorText {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>color: #ff0000;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin-top: 10px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/head&gt;</span></p>
+<p class="p1"><span class="s1">&lt;body&gt;</span></p>
+<p class="p2"><span class="s1"><br>
+</span></p>
+<p class="p1"><span class="s1">&lt;h1&gt;Weather Information&lt;/h1&gt;</span></p>
+<p class="p2"><span class="s1"><br>
+</span></p>
+<p class="p1"><span class="s1">&lt;label for="cityInput"&gt;Enter City:&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1">&lt;input type="text" id="cityInput" placeholder="E.g., London" required&gt;</span></p>
+<p class="p1"><span class="s1">&lt;button id="getWeatherButton"&gt;Get Weather&lt;/button&gt;</span></p>
+<p class="p2"><span class="s1"><br>
+</span></p>
+<p class="p1"><span class="s1">&lt;div id="weatherInfo"&gt;&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div id="errorText"&gt;&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"><br>
+</span></p>
+<p class="p1"><span class="s1">&lt;script&gt;</span></p>
+<p class="p3"><span class="s2"><span class="Apple-converted-space">    </span>const apiKey = 'Y</span><span class="s1">4519fa5e6bda40410cea1f96cb71e00</span><span class="s2">';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>const cityInput = document.getElementById('cityInput');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>const getWeatherButton = document.getElementById('getWeatherButton');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>const weatherInfo = document.getElementById('weatherInfo');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>const errorText = document.getElementById('errorText');</span></p>
+<p class="p2"><span class="s1"><br>
+</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>getWeatherButton.addEventListener('click', function () {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const city = cityInput.value.trim();</span></p>
+<p class="p2"><span class="s1"><br>
+</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>if (city !== '') {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&amp;appid=${apiKey}`)</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>.then(response =&gt; response.json())</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>.then(data =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>const temperature = data.main.temp - 273.15; // Convert from Kelvin to Celsius</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>const description = data.weather[0].description;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>const cityName = data.name;</span></p>
+<p class="p2"><span class="s1"><br>
+</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>weatherInfo.innerHTML = `&lt;p&gt;&lt;strong&gt;Current weather in ${cityName}:&lt;/strong&gt; ${Math.round(temperature)}°C, ${description}.&lt;/p&gt;`;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>errorText.textContent = '';<span class="Apple-converted-space">  </span>// Clear any previous error message</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>})</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>.catch(error =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>console.error('Error fetching weather data:', error);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>weatherInfo.textContent = '';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>errorText.textContent = 'Error fetching weather data. Please try again.';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>});</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>} else {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>weatherInfo.textContent = '';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>errorText.textContent = 'Please enter a city name.';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>});</span></p>
+<p class="p1"><span class="s1">&lt;/script&gt;</span></p>
+<p class="p2"><span class="s1"><br>
+</span></p>
+<p class="p1"><span class="s1">&lt;/body&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/html&gt;</span></p>
+</body>
+</html>
